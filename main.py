@@ -12,6 +12,6 @@ async def read_root(name: str = Query(default="World", description="The name to 
     if os.path.exists(file_path):
         with open(file_path, "r") as file:
             file_content = file.read()
-        return {"message": f"Hello, {name}. {file_content}"}
+        return {"message": f"Hello there, {name}. {file_content}"}
     else:
-        return {"message": f"Hello, {name}. File not found."}
+        return {"message": f"Hello there, {name}. File not found."}
